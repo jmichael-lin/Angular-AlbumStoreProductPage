@@ -10,10 +10,10 @@ export class ProductDescriptionComponent implements OnInit {
 
   albumInfo: any;
 
-  constructor(private _productServer: ProductService) { }
+  constructor(private _productService: ProductService) { }
 
   ngOnInit() {
-    this._productServer.getAlbum(1).subscribe((response) => this.albumInfo = response);     
+    this._productService.getAlbum(1).subscribe((response) => this.albumInfo = response);     
   }
 
 }
